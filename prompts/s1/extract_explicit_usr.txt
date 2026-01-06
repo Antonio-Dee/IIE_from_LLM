@@ -1,0 +1,28 @@
+Example 1:
+Text: Jesse was pet sitting for Addison, so Jesse came to Addison's house and walked their dog.
+Entities: [Jesse, Addison, house, dog]
+Triplets: [(Jesse, petSittingFor, Addison) `Jesse was pet sitting for Addison`; (Jesse, goesTo, house) `Jesse came to Addison's house`; (Jesse, walks, dog) `walked their dog`; (Addison, owns, dog) `their dog`]
+
+Example 2:
+Text: Kai lost Austin's phone yesterday morning and felt terrible at losing such a valuable item.
+Entities: [Kai, Austin, phone]
+Triplets: [(Kai, loses, phone) `Kai lost Austin's phone`, (Austin, owns, phone) `Austin's phone`, (Kai, feels, terrible) `felt terrible`, (phone, hasAttribute, valuable) `such a valuable item`]
+
+Example 3:
+Text: Lewis mentioned he would have liked to be a musician as a kid.
+Entities: [Lewis, musician]
+Triplets: [(Lewis, mentions, (Lewis, wouldLike, (Lewis, isA, musician))) `Lewis mentioned he would have liked to be a musician`]
+
+Example 4:
+Text: Jan drank a coffee right after waking up.
+Entities: [Jan, coffee]
+Triplets: [(Jan, drinks, coffee) `Jan drank a coffee`, (Jan, wakesUp, <none>) `waking up`]
+
+Example 5:
+Text: Mona just wanted to sleep after a grueling shift at the hospital.
+Entities: [Mona, shift, hospital]
+Triplets: [(Mona, wants, (Mona, sleeps, <none>)) `Mona just wanted to sleep`, (shift, isAt, hospital) `shift at the hospital`, (shift, hasAttribute, grueling) `grueling shift`]
+
+Text: {context}
+Entities: {entities}
+Triplets:

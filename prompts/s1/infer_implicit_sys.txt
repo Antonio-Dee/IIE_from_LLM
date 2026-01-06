@@ -1,0 +1,29 @@
+Given a piece of text and a list of entities mentioned in it, list additional facts that can be deduced or inferred from the text.
+These must be compatible with and derived from the provided text, even though they are not explicitly stated in the text.
+List as many facts as can possibly be derived; avoiding false positives is not the main concern.
+
+The facts can include, but should not be limited to, the following:
+- The subject's intent in performing the specified action.
+- The subject's or the object's reaction to the event, emotional or otherwise.
+- The events likely to precede or follow the specified action, such as necessary pre-conditions or subsequent effects.
+- The qualities that can be attributed to the subject or the object based on the event.
+
+Represent these facts as relational triplets in the form of (Subject, Relation, Object).
+The relation of each triplet must be expressed in the present tense, regardless of how it was worded in the text.
+The triplets must not contain information related to timing, for instance the starting time of an event or its duration.
+Avoid unnecessary repetitions; triplets in the list must not be duplicates of other triplets.
+
+If the subject and/or the object of a triplet is an entity present in the provided list, its name has to be reported verbatim.
+If the text conveys information that can be represented as a unary relation without an object, use <none> as the object.
+If the text mentions an entity having an attribute or a quality, use the attribute in question as the object.
+Lastly, the object can also be a nested triplet to allow for more expressiveness, such as in the following cases:
+- events that introduce a reference to a possible world -- e.g., (Mary, wants, (John, buys, wine));
+- verbs that introduce an entailment (or presupposition) of the argument's veracity -- e.g., (Mary, regrets, (Mary, doesNotMarry, John));
+- events that introduce a presupposition about the non-veracity of the argument -- e.g., (Lina, forgets, (Lina, hasToBuy, flowers));
+- events that fall into the categories of reporting and perception -- e.g., (Tim, sees, (Ron, crosses, street));
+- reporting and perception events with negative polarity -- e.g., (Sue, denies, (Sue, eats, cake));
+- events introduced by negative particles -- e.g., (Greg, doesNotWant, (Greg, goes, home));
+- events accompanied by an aspectual verb -- e.g., (Jody, stops, (Jody, talks, <none>)).
+In any other case, it is crucial that the object is a credible entity. Ideally, it should be a single word, but it can include more if needed.
+
+Be as concise as possible and provide an answer in the following form: [(sub1, rel1, obj1); (sub2, rel2, obj2); ...].

@@ -1,0 +1,9 @@
+You are given a piece of text and a list of pairs of relational triplets in the form [((s1, r1, o1), (s2, r2, o2)); ((s3, r3, o3); (s4, r4, o4)); ...].
+Based on the text, derive the relative temporal relationship between each pair of triplets by marking it with a tag:
+- <before> if the first triplet of the pair occurs before the second;
+- <after> if the first triplet of the pair occurs after the second;
+- <while> if the first and the second triplet occur simultaneously;
+- <none> if no defined temporal relationship between the two triplets can be derived from the text.
+Provide an answer by repeating the pairs of triplets in the same order they were given and associating each of them to
+their temporal relation tag. Answer in the form [((s1, r1, o1), (s2, r2, o2)) -> ...; ((s3, r3, o3); (s4, r4, o4)) -> ...; ...].
+Be as concise and brief as possible and avoid answering with anything other than the triplet pairs and the tags.

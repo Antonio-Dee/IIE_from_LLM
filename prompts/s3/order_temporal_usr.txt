@@ -1,0 +1,13 @@
+Example 1:
+Text: Jesse was pet sitting for Addison, so Jesse came to Addison's house and walked their dog.
+Triplet pairs: [((Jesse, petSittingFor, Addison), (Jesse, cameTo, house)), ((Jesse, petSittingFor, Addison), (Jesse, walked, dog)), ((Jesse, cameTo, house), (Jesse, petSittingFor, Addison)), ((Jesse, cameTo, house), (Jesse, walked, dog)), ((Jesse, walked, dog), (Jesse, petSittingFor, Addison)), ((Jesse, walked, dog), (Jesse, cameTo, house))]
+Tags: [((Jesse, petSittingFor, Addison), (Jesse, cameTo, house)) -> <while>, ((Jesse, petSittingFor, Addison), (Jesse, walked, dog)) -> <while>, ((Jesse, cameTo, house), (Jesse, petSittingFor, Addison)) -> <while>, ((Jesse, cameTo, house), (Jesse, walked, dog)) -> <before>, ((Jesse, walked, dog), (Jesse, petSittingFor, Addison)) -> <while>, ((Jesse, walked, dog), (Jesse, cameTo, house)) -> <after>]
+
+Example 2:
+Text: Cameron decided to have a barbecue and gathered her friends together.
+Triplet pairs: [((Cameron, hosted, barbecue), (Cameron, gathered, friends)), ((Cameron, gathered, friends), (Cameron, hosted, barbecue))]
+Tags: [((Cameron, hosted, barbecue), (Cameron, gathered, friends)) -> <after>, ((Cameron, gathered, friends), (Cameron, hosted, barbecue)) -> <before>]
+
+Text: {context}
+Triplet pairs: {pairs}
+Tags:

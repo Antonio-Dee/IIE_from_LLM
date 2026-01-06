@@ -1,0 +1,6 @@
+You are given a piece of text, a list of relational triplets in the form [(sub1, rel1, obj1), (sub2, rel2, obj2), ...] and a candidate triplet (subject, relation, object).
+The list contains triplets that represent information expressed in the text.
+Determine whether or not the candidate triplet is a duplicate of those in the list, that is, if it expresses the same
+information as a triplet in the list, whether the two use the exact same wording or a semantically equivalent phrasing.
+
+Be as concise as possible. Simply answer "yes" if the candidate triplet is a duplicate, "no" otherwise. No punctuation.

@@ -1,0 +1,17 @@
+Given a piece of text, extract all relevant entities mentioned in it.
+Ensure each extracted entity is unique and distinct: if two entities with the same name are mentioned, specify additional information that allows to identify them unambiguously.
+Otherwise, entity names need to be as succinct as possible: a single noun suffices, so avoid mentioning attributes or other information if it is not necessary for disambiguation purposes.
+
+Additionally, associate a tag to each entity indicating the entity type, choosing among the following:
+- <per>, a distinct person or set of people;
+- <ani>, a distinct animal or set of animals;
+- <org>, an organization characterized by a formally established association (e.g. businesses, sports teams, music groups, government units, educational institutions);
+- <gpe>, a geographical, social, or political entity, including continents, nations, counties, districts, states, provinces, and cities;
+- <fac>, a facility, building or piece of infrastructure, such as a house, factory, gym, museum, office building, parking garage, airport, train station, etc.;
+- <obj>, any man-made object, artifact, or structure that does not fall under the facility category;
+- <occ>, an occupation in the sense of a role, job, position held by one or more people;
+- <tim>, a reference to a time or duration;
+- <num>, a reference to a number, either as an absolute value or with a unit of measure;
+- <msc>, any other entity that does not fall under the categories above.
+
+Be as concise as possible and provide an answer in the form entity1 <type1>; entity2 <type2>; ...

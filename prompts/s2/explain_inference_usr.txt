@@ -1,0 +1,34 @@
+Example 1:
+Text: Jesse was pet sitting for Addison, so Jesse came to Addison's house and walked their dog.
+Inference: (dog, isAt, house)
+Relationships: [(Jesse, petSittingFor, Addison), (Jesse, cameTo, house), (Jesse, walked, dog), (Addison, owns, dog)]
+Premise: [(Jesse, petSittingFor, Addison), (Jesse, cameTo, house)]
+
+Example 2:
+Text: Tracy wants to make a special dinner tonight, so they went shopping today.
+Inference: (Tracy, buys, ingredients)
+Relationships: [(Tracy, wants, (Tracy, makes, dinner)), (Tracy, goes, shopping), (dinner, hasAttribute, special), (Tracy, makes, dinner)]
+Premise: [(Tracy, wants, (Tracy, makes, dinner)), (Tracy, goes, shopping)]
+
+Example 3:
+Text: Quinn was having a talk with their significant other. Quinn poured their heart out.
+Inference: (Quinn, wants, (significant other, understands, Quinn))
+Relationships: [(Quinn, talksTo, significant other), (Quinn, poursOut, heart), (heart, belongsTo, Quinn)]
+Premise: [(Quinn, talksTo, significant other), (Quinn, poursOut, heart)]
+
+Example 4:
+Text: Jan bought a cat at the pet store and brought it home with them.
+Inference: (cat, needs, (cat, drinks, water))
+Relationships: [(Jan, buys, cat), (Jan, bringsTo, home), (cat, isAt, pet store)]
+Premise: []
+
+Example 5:
+Text: Ash was still angry at his mother for making his sandwich without mustard.
+Inference: (Ash, expects, (sandwich, contains, mustard))
+Relationships: [(Ash, isAngryAt, mother), (mother, makes, sandwich), (sandwich, lacks, mustard)]
+Premise: [(Ash, isAngryAt, mother), (sandwich, lacks, mustard)]
+
+Text: {context}
+Inference: {inference}
+Relationships: {relationships}
+Premise:

@@ -1,0 +1,33 @@
+Example 1:
+Text: Jesse was pet sitting for Addison, so Jesse came to Addison's house and walked their dog.
+Inference: (Jesse, takesCareOf, dog)
+CanBeInferred: yes
+
+Example 2:
+Text: Leah and Fawn have been classmates for 5 years.
+Inference: (Leah, isFriendOf, Fawn)
+CanBeInferred: no; being classmates does not necessarily imply friendship.
+
+Example 3:
+Text: Ash was still angry at his mother for making his sandwich without mustard.
+Inference: (mother, disregards, (Ash, values, preferences))
+CanBeInferred: no; the text does not indicate this is the reason why the sandwich lacks mustard.
+
+Example 4:
+Text: Jan bought a cat at the pet store and brought it home with them.
+Inference: (cat, needs, (cat, drinks, water))
+CanBeInferred: yes
+
+Example 5:
+Text: Quinn was having a talk with their significant other. Quinn poured her heart out.
+Inference: (Quinn, wants, (significant other, understands, Quinn))
+CanBeInferred: yes
+
+Example 6:
+Text: Alex called the school immediately to make a complaint with the principal.
+Inference: (Alex, expects, (principal, solves, (Alex, has, complaint)))
+CanBeInferred: no; Alex speaking to the principal does not mean he expects them to solve his complaint.
+
+Text: {context}
+Inference: {inference}
+CanBeInferred:

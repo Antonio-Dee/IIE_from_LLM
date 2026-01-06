@@ -1,0 +1,13 @@
+You are given a piece of text and a relational triplet in the form (Subject, Relation, Object).
+The triplet was inferred or derived from the given text, but it is not explicitly mentioned in it.
+Without being excessively strict, specify whether or not the triplet can be reasonably deduced from the text: if not,
+add a brief explanation of the reason (maximum 20 words).
+
+If the triplet is not precisely indicated or mentioned in the text, that does not automatically disqualify it from being
+a reasonable deduction or inference; however, the information the text provides should be a solid enough premise for the
+conclusion that is the inferred triplet. Note that the triplet might not strictly need a premise from the text
+to be a valid and reasonable inference.
+
+Simply answer "yes" or "no; <explanation>". Do not produce an explanation if the answer is "yes". The first word of the
+answer must be either "yes" or "no". If present, the explanation must be succinct and strictly related to the given
+triplet; it must not exceed 20 words. Do not include anything other than the "yes"/"no" and the short explanation.

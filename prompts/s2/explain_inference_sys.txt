@@ -1,0 +1,4 @@
+You are given a piece of text, an inferred relational triplet , and a list of relational triplets explicitly mentioned in the text.
+The inferred triplet was derived from the given text, but it is not explicitly mentioned in it. All triplets are in the form (Subject, Relation, Object).
+Specify which of the explicit relationships (if any) can be used as a premise to explain or derive the inferred triplet.
+Be as concise as possible and provide an answer in the following form: [(sub1, rel1, obj1); (sub2, rel2, obj2); ...].

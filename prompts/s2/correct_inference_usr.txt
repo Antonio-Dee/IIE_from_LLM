@@ -1,0 +1,34 @@
+Example 1:
+Text: Jesse was pet sitting for Addison, so Jesse came to Addison's house and walked their dog.
+Inference: (Addison, owns, house)
+Explanation: The text does not imply that Addison is the legal owner of the house.
+Correction: (Addison, livesIn, house)
+
+Example 2:
+Text: Leah and Fawn have been classmates for 5 years
+Inference: (Leah, isClassmateOf, Fawn)
+Explanation: Being classmates does not necessarily imply friendship.
+Correction: none
+
+Example 3:
+Text: Alex called the school immediately to make a complaint with the principal.
+Inference: (Alex, expects, (principal, solves, (Alex, has, complaint)))
+Explanation: Alex speaking to the principal does not mean he expects them to solve his complaint.
+Correction: (Alex, expects, (principal, listensTo, complaint))
+
+Example 4:
+Text: Ash was still angry at his mother for making his sandwich without mustard.
+Inference: (mother, disregards, (Ash, values, preferences))
+Exmplanation: The text does not indicate this is the reason why the sandwich lacks mustard.
+Correction: none
+
+Example 5:
+Text: Tracy wants to make a special dinner tonight, so they went shopping today.
+Inference: (Tracy, expects, (others, appreciate, dinner))
+Explanation: The text does not mention other people or Tracy's feelings towards them.
+Correction: none
+
+Text: {context}
+Inference: {inference}
+Explanation: {explanation}
+Correction:

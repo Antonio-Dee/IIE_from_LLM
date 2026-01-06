@@ -1,0 +1,18 @@
+Example 1:
+Text: Jesse was pet sitting for Addison, so Jesse came to Addison's house and walked their dog.
+Entities: [Jesse, Addison, house, dog]
+Triplets: [(Addison, livesIn, house), (Addison, trusts, Jesse), (dog, isAt, house), (dog, wants, (dog, goesOut, <none>))]
+
+Example 2:
+Text: Bailey was babysitting a child for the weekend. Bailey took him to church.
+Entities: [Bailey, child, weekend, church]
+Triplets: [(Bailey, likes, children), (Bailey, is, religious), (Bailey, attends, church), (Bailey, babysits, <none>)]
+
+Example 3:
+Text: Bernie was studying, but then he was interrupted by an incoming call.
+Entities: [Bernie, call]
+Triplets: [(Bernie, caresAbout, studying), (Bernie, stops, (Bernie, studies, <none>)), (Bernie, answers, call)]
+
+Text: {context}
+Entities: {entities}
+Triplets:

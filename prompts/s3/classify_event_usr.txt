@@ -1,0 +1,18 @@
+Example 1:
+Text: Jesse was pet sitting for Addison, so Jesse came to Addison's house and walked their dog.
+Triplets: [(Jesse, petSitsFor, Addison); (Jesse, goesTo, house); (Jesse, walks, dog); (Addison, trusts, Jesse); (Jesse, likes, dogs)]
+Tags: [(Jesse, petSitsFor, Addison) <event> `none`; (Jesse, goesTo, house) <event> `none`; (Jesse, walks, dog) <event> `none`; (Addison, trusts, Jesse) <state> `none`; (Jesse, likes, dogs) <state> `none`]
+
+Example 2:
+Text: Aubrey tried and got Kendall to go to the dance recital next Wednesday at the town square.
+Triplets: [(Aubrey, invites, Kendall); (Kendall, attends, recital); (recital, locatedAt, town square)]
+References: [(Aubrey, invites, Kendall) <event> `none`; (Kendall, attends, recital) <event> `next Wednesday`; (recital, locatedAt, town square) <state> `none`]
+
+Example 3:
+Text: Cameron decided to have a barbecue on the Summer solstice and gathered her friends together.
+Triplets: [(Cameron, hosts, barbecue); (Cameron, gathers, friends); (Cameron, buys, supplies); (Cameron, values, friends); (friends, feel, grateful)]
+Tags: [(Cameron, hosts, barbecue) <event> `on the Summer solstice`; (Cameron, gathers, friends) <event> `none`; (Cameron, buys, supplies) <event> `none`; (Cameron, values, friends) <state> `none`; (friends, feel, grateful) <event> `none`]
+
+Text: {context}
+Triplets: {relationships}
+Tags:

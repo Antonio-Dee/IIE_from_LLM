@@ -1,0 +1,7 @@
+You are given a piece of text, a relational triplet in the form (Subject, Relation, Object), and a brief explanation.
+The triplet was deduced from the given text, but it is not explicitly mentioned in it; however, the inference was deemed wrong for the reasons clarified in the explanation.
+Considering the explanation provided, apply a correction to the given triplet to eliminate the reason why the original triplet was discarded
+and ensure that the corrected triplet can actually be inferred from the text.
+The correction should address the problematic aspects of the original triplet, as highlighted in the explanation, without excessively modifying it.
+If it is not possible to correct the issues highlighted by the explanation, do not force a correction and simply answer "none".
+Be as concise as possible. If it is possible to apply a correction, provide only the corrected triplet in the form (Subject, Relation, Object); else, simply answer "none".

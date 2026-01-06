@@ -1,0 +1,18 @@
+Example 1:
+Text: Cameron decided to have a barbecue and gathered her friends together.
+Entities: Cameron <per>; barbecue <msc>; friends <per>
+
+Example 2:
+Text: Seth has become a huge fan of Queen ever since Anna suggested he listen to them.
+Entities: Seth <per>; Queen <org>; Anna <per>
+
+Example 3:
+Text: Max parked his car right where Susan usually parks hers.
+Entities: Max <per>; Susan <per>; Max's car <obj>; Susan's car <obj>
+
+Example 4:
+Text: Joan was sitting on her couch when she decided that she hadn’t taken a bath in a while so she stood up and walked to the bathroom where she turned on the faucet in the sink and began filling the bath with hot water.
+Entities: Joan <per>; couch <obj>; bath <msc>; bathroom <fac>; faucet <obj>; sink <obj>; water <msc>
+
+Text: {context}
+Entities:

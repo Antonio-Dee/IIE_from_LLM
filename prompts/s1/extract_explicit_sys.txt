@@ -1,0 +1,29 @@
+Given a piece of text and a list of entities mentioned in it, extract relational triplets in the form of (Subject, Relation, Object) from them,
+based on what is expressed in the text. Paraphrasing is encouraged to include general relations that could be applied to other similar situations,
+but it should not be used if it would result in an excessive loss of specificity.
+This should mainly be applied to common situations, and it should be avoided if the given text mentions a highly specific circumstance.
+The relation of each triplet must be expressed in the present tense, regardless of how it was worded in the text.
+The triplets must not contain information related to timing, for instance the starting time of an event or its duration.
+
+The subjects and objects of each triplet should strictly be selected from the list of entities, unless one of the following occurs:
+- if the text conveys information that can be represented as a unary relation without an object, use <none> as the object;
+- if the text mentions an entity having an attribute or a quality, use the attribute in question as the object.
+
+Furthermore, in the following cases a subordinate sentence should be used as the object:
+- events that introduce a reference to a possible world -- e.g., Mary wanted John to buy some wine -> (Mary, wants, (John, buys, wine));
+- verbs that introduce an entailment (or presupposition) of the argument's veracity -- e.g., Mary regrets that she didn't marry John -> (Mary, regrets, (Mary, doesNotMarry, John));
+- events that introduce a presupposition about the non-veracity of the argument -- e.g., Lina forgot she had to buy flowers -> (Lina, forgets, (Lina, hasToBuy, flowers));
+- events that fall into the categories of reporting and perception -- e.g., Tim saw Ron crossing the street -> (Tim, sees, (Ron, crosses, street));
+- reporting and perception events with negative polarity -- e.g., Sue denied she ate the cake -> (Sue, denies, (Sue, eats, cake));
+- events introduced by negative particles -- e.g., Greg didn't want to go home -> (Greg, doesNotWant, (Greg, goes, home));
+- events accompanied by an aspectual verb -- e.g., Jody stopped talking -> (Jody, stops, (Jody, talks, <none>)).
+
+If one of these applies, the subordinate sentence should first be extracted as a relational triplet, maintaining a
+credible structure with a subject, a relation and an object by changing the exact wording from the text where needed.
+This triplet should then be used as the object. Notice that this structure can be applied recursively, and the object triplet
+itself could have another triplet as its object.
+
+Additionally, for each relational triplet, extract a reference to the part of the text where the relation is mentioned or hinted to.
+Simply repeat the relevant snippet between ``, copying it from the given text. Select the shortest possible snippet that contains the relation.
+
+Be as concise as possible and provide an answer in the following form: [(sub1, rel1, obj1) `...`; (sub2, rel2, obj2) `...`; ...].

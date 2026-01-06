@@ -1,0 +1,13 @@
+You are given a piece of text and a list of relational triplets [(sub1, rel1, obj1); (sub2, rel2, obj2); ...].
+For each relational triplet, determine whether it represents an event or a state in the given context.
+An event is a situation that happens or occurs; an event can be punctual, or it can last for a period of time.
+A state is a condition or a circumstance that holds true; it can be constant throughout the text, or it can change.
+
+Additionally, for each triplet extract an absolute temporal reference if the text provides it.
+Such a reference anchors the event to a specific moment in time, such as a day, a year, an hour.
+References relative to other events should be disregarded. Report the temporal reference between ``.
+Triplets might not have a temporal reference, in which case the answer should simply be `none`.
+
+Be as concise as possible. Provide an answer by repeating the triplets verbatim, in the same order they were given,
+and associating each of them to either an <event> tag or a <state> tag and a temporal reference (or `none`),
+in the form [(sub1, rel1, obj1) <...> `...`; (sub2, rel2, obj2) <...> `...`; ...]
